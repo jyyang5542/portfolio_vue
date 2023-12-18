@@ -1,3 +1,78 @@
 @import './variables';
 @import './mixin';
 @import './reset';
+
+html {
+  font-size: 10px;
+}
+
+.layout {
+  display: grid;
+  grid-template-areas:
+    'a a'
+    'b c'
+    'd d';
+  grid-template-columns: 20rem auto;
+  grid-template-rows: 8rem auto 4rem;
+  min-height: 100vh;
+  font-size: 1.4rem;
+
+  &.home {
+    grid-template-areas:
+      'a a'
+      'c c'
+      'd d';
+  }
+}
+
+.header {
+  grid-area: a;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  border-bottom: 0.1rem solid #111;
+
+  .header-logo {
+    &__link {
+    }
+    &__img {
+    }
+  }
+  .header-nav {
+    margin-left: auto;
+
+    &__list {
+      display: flex;
+      gap: 2rem;
+    }
+    &__item {
+    }
+    &__link {
+      &.on {
+        color: rosybrown;
+      }
+    }
+  }
+}
+
+.side {
+  grid-area: b;
+  padding: 3rem 2rem;
+  border-right: 0.1rem solid #111;
+}
+
+.content {
+  padding: 3rem 2rem;
+  grid-area: c;
+}
+
+.footer {
+  grid-area: d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 0.1rem solid #111;
+
+  .footer-copyright {
+  }
+}

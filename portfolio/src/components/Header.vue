@@ -1,24 +1,14 @@
 <template>
   <section class="header">
     <h1 class="header-logo">
-      <a href="/home"><img src="#" alt="로고" /></a>
+      <a href="/" class="header-logo__link">
+        <img src="#" alt="로고" class="header-logo__img" />
+      </a>
     </h1>
     <nav class="header-nav">
       <ul class="header-nav__list">
-        <li class="header-nav__item" :class="currentRoute === 'Home' ? 'on' : ''">
-          <a href="/home" class="header-nav__link">Home</a>
-        </li>
-        <li class="header-nav__item" :class="currentRoute === 'About' ? 'on' : ''">
-          <a href="/about" class="header-nav__link">About</a>
-        </li>
-        <li class="header-nav__item" :class="currentRoute === 'Portfolio' ? 'on' : ''">
-          <a href="/portfolio" class="header-nav__link">Portfolio</a>
-        </li>
-        <li class="header-nav__item" :class="currentRoute === 'Contact' ? 'on' : ''">
-          <a href="/contact" class="header-nav__link">Contact</a>
-        </li>
-        <li class="header-nav__item" :class="currentRoute === 'Study' ? 'on' : ''">
-          <a href="/study" class="header-nav__link">Study</a>
+        <li v-for="(item, i) in navigation" :key="i" class="header-nav__item">
+          <a :href="item === 'home' ? '/' : '/' + item" class="header-nav__link" :class="currentRoute === capitalize(item) ? 'on' : ''">{{ capitalize(item) }}</a>
         </li>
       </ul>
     </nav>
@@ -31,8 +21,18 @@ export default {
 
   data() {
     return {
-      currentRoute: '',
+      currentRoute: 'Home',
+      navigation: ['home', 'about', 'portfolio', 'contact', 'study'],
     };
+  },
+
+  methods: {
+    capitalize(string) {
+      const word = string;
+      const capitalized = word.charAt(0).toUpperCase() + word.slice(1);
+
+      return capitalized;
+    },
   },
 
   watch: {

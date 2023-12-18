@@ -1,6 +1,6 @@
 <template>
   <section class="footer">
-    <p class="footer__copyright">Copyright 2023 <b>양정연</b> All Rights Reserved.</p>
+    <p class="footer-copyright">Copyright 2023 <b>양정연</b> All Rights Reserved.</p>
   </section>
 </template>
 

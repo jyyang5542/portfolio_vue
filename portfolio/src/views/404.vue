@@ -1,12 +1,12 @@
 <template>
-  <section class="study">
-    <h1>Study</h1>
+  <section class="not-found">
+    <h1>Page Not Found</h1>
   </section>
 </template>
 
 <script>
 export default {
-  name: 'MyStudy',
+  name: 'NotFound',
 
   // props: {
   //   msg: String,

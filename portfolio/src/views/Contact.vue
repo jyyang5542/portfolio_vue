@@ -7,6 +7,7 @@
 <script>
 export default {
   name: 'MyContact',
+
   // props: {
   //   msg: String,
   // },
