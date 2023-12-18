@@ -1,8 +1,6 @@
 <template>
-  <section class="about">
-    <div class="content-wrap">
-      <h1>About</h1>
-    </div>
+  <section class="content about">
+    <h1>About</h1>
   </section>
 </template>
 

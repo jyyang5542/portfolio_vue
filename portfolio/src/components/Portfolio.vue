@@ -1,8 +1,6 @@
 <template>
-  <section class="portfolio">
-    <div class="content-wrap">
-      <h1>Portfolio</h1>
-    </div>
+  <section class="content portfolio">
+    <h1>Portfolio</h1>
   </section>
 </template>
 

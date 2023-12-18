@@ -7,7 +7,7 @@ html {
   display: grid;
   grid-template-areas: 'a b';
   grid-template-columns: 8rem auto;
-  min-height: 100vh;
+  height: 100vh;
   font-size: 1.6rem;
   color: $txt_black;
 }
@@ -42,7 +42,7 @@ html {
     }
     &__item {
     }
-    &__link {
+    &__button {
       writing-mode: vertical-rl;
       text-orientation: use-glyph-orientation;
       // transform: scale(-1, -1);
@@ -68,42 +68,26 @@ html {
 }
 // HEADER : END
 
-// SIDE : START
-.side {
-  padding: 3rem 2rem;
-  border-right: 0.1rem solid $border_gray1;
-}
-
-@media screen and (max-width: $mobile) {
-  .side {
-  }
-}
-// SIDE : END
-
 // CONTENT : START
-.content {
+.contents {
   grid-area: b;
-  padding: 3rem 2rem;
+  height: 100%;
+  overflow: auto;
 
-  .content-wrap {
+  .content {
     height: 100%;
-    overflow: auto;
+    padding: 3rem 2rem;
   }
 }
 
 @media screen and (max-width: $mobile) {
-  .content {
+  .contents {
   }
 }
 // CONTENT : END
 
 // FOOTER : START
 .footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-top: 0.1rem solid $border_gray1;
-
   .footer-copyright {
   }
 }

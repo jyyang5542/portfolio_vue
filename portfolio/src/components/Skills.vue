@@ -1,14 +1,12 @@
 <template>
-  <section class="skill">
-    <div class="content-wrap">
-      <h1>Skill</h1>
-    </div>
+  <section class="content skills">
+    <h1>Skill</h1>
   </section>
 </template>
 
 <script>
 export default {
-  name: 'MySkill',
+  name: 'MySkills',
 
   // props: {
   //   msg: String,

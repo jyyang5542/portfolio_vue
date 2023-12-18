@@ -3,7 +3,7 @@
     <nav class="header-nav">
       <ul class="header-nav__list">
         <li v-for="(item, i) in navigation" :key="i" class="header-nav__item">
-          <a :href="item === 'home' ? '/' : '/' + item" class="header-nav__link" :class="currentRoute === capitalize(item) ? 'on' : ''">{{ capitalize(item) }}</a>
+          <button class="header-nav__button" :class="isOn === item ? 'on' : ''" @click="activateSection(item)">{{ capitalize(item) }}</button>
         </li>
       </ul>
     </nav>
@@ -21,7 +21,7 @@ export default {
 
   data() {
     return {
-      currentRoute: 'Home',
+      isOn: 'home',
       navigation: ['home', 'about', 'skills', 'portfolio', 'contact'],
     };
   },
@@ -33,11 +33,8 @@ export default {
 
       return capitalized;
     },
-  },
-
-  watch: {
-    $route(to) {
-      return (this.currentRoute = to.name);
+    activateSection(string) {
+      this.isOn = string;
     },
   },
 };

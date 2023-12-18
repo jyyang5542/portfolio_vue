@@ -4,3 +4,63 @@
 @import './mixin';
 @import './reset';
 @import './layout';
+
+// HOME : START
+.home {
+  background: rgba(red, 0.1);
+}
+@media screen and (max-width: $mobile) {
+  .home {
+  }
+}
+// HOME : END
+
+// ABOUT : START
+.about {
+  background: rgba(orange, 0.1);
+}
+@media screen and (max-width: $mobile) {
+  .about {
+  }
+}
+// ABOUT : END
+
+// SKILLS : START
+.skills {
+  background: rgba(yellow, 0.1);
+}
+@media screen and (max-width: $mobile) {
+  .skills {
+  }
+}
+// SKILLS : END
+
+// PORTFOLIO : START
+.portfolio {
+  background: rgba(black, 0.1);
+}
+@media screen and (max-width: $mobile) {
+  .portfolio {
+  }
+}
+// PORTFOLIO : END
+
+// CONTACT : START
+.contact {
+  background: rgba(cyan, 0.1);
+}
+@media screen and (max-width: $mobile) {
+  .contact {
+  }
+}
+// CONTACT : END
+
+// FOOTER : START
+.footer {
+  height: auto !important;
+}
+@media screen and (max-width: $mobile) {
+  .footer {
+  }
+}
+// FOOTER : END
