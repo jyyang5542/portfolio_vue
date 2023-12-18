@@ -5,22 +5,11 @@ html {
 // OUTER LAYOUT : START
 .layout {
   display: grid;
-  grid-template-areas:
-    'a a'
-    'b c'
-    'd d';
-  grid-template-columns: 20rem auto;
-  grid-template-rows: 8rem calc(100vh - 8rem - 4rem) 4rem;
+  grid-template-areas: 'a b';
+  grid-template-columns: 8rem auto;
   min-height: 100vh;
   font-size: 1.6rem;
   color: $txt_black;
-
-  &.home {
-    grid-template-areas:
-      'a a'
-      'c c'
-      'd d';
-  }
 }
 
 @media screen and (max-width: $mobile) {
@@ -35,30 +24,40 @@ html {
 .header {
   grid-area: a;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  padding: 0 2rem;
+  justify-content: center;
+  padding: 3rem 0;
   background-color: $bg_white;
-  border-bottom: 0.1rem solid $border_gray1;
+  border-right: 0.1rem solid $border_gray1;
 
-  .header-logo {
-    &__link {
-    }
-    &__img {
-    }
-  }
   .header-nav {
-    margin-left: auto;
-
     &__list {
       display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
       gap: 2rem;
+      transform: rotate(180deg);
     }
     &__item {
     }
     &__link {
+      writing-mode: vertical-rl;
+      text-orientation: use-glyph-orientation;
+      // transform: scale(-1, -1);
+
       &.on {
         color: $txt_primary;
       }
+    }
+  }
+  .header-logo {
+    margin-top: 5rem;
+
+    &__link {
+    }
+    &__img {
     }
   }
 }
@@ -71,7 +70,6 @@ html {
 
 // SIDE : START
 .side {
-  grid-area: b;
   padding: 3rem 2rem;
   border-right: 0.1rem solid $border_gray1;
 }
@@ -84,7 +82,7 @@ html {
 
 // CONTENT : START
 .content {
-  grid-area: c;
+  grid-area: b;
   padding: 3rem 2rem;
 
   .content-wrap {
@@ -101,7 +99,6 @@ html {
 
 // FOOTER : START
 .footer {
-  grid-area: d;
   display: flex;
   align-items: center;
   justify-content: center;

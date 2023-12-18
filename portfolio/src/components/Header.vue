@@ -1,10 +1,5 @@
 <template>
   <section class="header">
-    <h1 class="header-logo">
-      <a href="/" class="header-logo__link">
-        <img src="#" alt="로고" class="header-logo__img" />
-      </a>
-    </h1>
     <nav class="header-nav">
       <ul class="header-nav__list">
         <li v-for="(item, i) in navigation" :key="i" class="header-nav__item">
@@ -12,6 +7,11 @@
         </li>
       </ul>
     </nav>
+    <h1 class="header-logo">
+      <a href="/" class="header-logo__link">
+        <img src="#" alt="로고" class="header-logo__img" />
+      </a>
+    </h1>
   </section>
 </template>
 
@@ -22,7 +22,7 @@ export default {
   data() {
     return {
       currentRoute: 'Home',
-      navigation: ['home', 'about', 'portfolio', 'contact', 'study'],
+      navigation: ['home', 'about', 'skills', 'portfolio', 'contact'],
     };
   },
 
