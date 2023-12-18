@@ -1,12 +1,12 @@
 <template>
-  <div class="hello">
-    <h1>111</h1>
-  </div>
+  <section class="portfolio">
+    <h1>Portfolio</h1>
+  </section>
 </template>
 
 <script>
 export default {
-  name: 'FirstView',
+  name: 'MyPortfolio',
   // props: {
   //   msg: String,
   // },

@@ -1,13 +1,12 @@
 <template>
-  <div class="hello">
-    <h1>333</h1>
-    <a href="./2">to 2</a>
-  </div>
+  <section class="about">
+    <h1>About</h1>
+  </section>
 </template>
 
 <script>
 export default {
-  name: 'ThirdView',
+  name: 'MyAbout',
   // props: {
   //   msg: String,
   // },

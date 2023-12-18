@@ -6,16 +6,16 @@
     <nav class="header-nav">
       <ul class="header-nav__list">
         <li class="header-nav__item">
-          <a href="/home" class="header-nav__link" :class="currentRoute === '홈' ? 'on' : ''">Home</a>
+          <a href="/home" class="header-nav__link" :class="currentRoute === 'Home' ? 'on' : ''">Home</a>
         </li>
         <li class="header-nav__item">
-          <a href="/1" class="header-nav__link">1</a>
+          <a href="/about" class="header-nav__link" :class="currentRoute === 'About' ? 'on' : ''">About</a>
         </li>
         <li class="header-nav__item">
-          <a href="/2" class="header-nav__link">2</a>
+          <a href="/portfolio" class="header-nav__link" :class="currentRoute === 'Portfolio' ? 'on' : ''">Portfolio</a>
         </li>
         <li class="header-nav__item">
-          <a href="/3" class="header-nav__link">3</a>
+          <a href="/contact" class="header-nav__link" :class="currentRoute === 'Contact' ? 'on' : ''">Contact</a>
         </li>
       </ul>
     </nav>
@@ -24,21 +24,12 @@
 
 <script>
 export default {
-  name: 'MainHeader',
+  name: 'MyHeader',
 
   data() {
     return {
       currentRoute: this.$router.currentRoute.value.name,
-      sample: 'Sample',
     };
-  },
-
-  methods: {
-    doSomething() {},
-  },
-
-  mounted() {
-    this.doSomething();
   },
 };
 </script>

@@ -1,16 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-import DefaultLayout from '../views/DefaultLayout';
-import FirstView from '../views/FirstView';
-import SecondView from '../views/SecondView';
-import ThirdView from '../views/ThirdView';
+import MyHome from '../views/Home';
+import MyAbout from '../views/About';
+import MyPortfolio from '../views/Portfolio';
+import MyContact from '../views/Contact';
 
 // 라우터 설계
 const routes = [
-  { path: '/home', name: '홈', component: DefaultLayout },
-  { path: '/1', name: '1', component: FirstView },
-  { path: '/2', name: '2', component: SecondView },
-  { path: '/3', name: '3', component: ThirdView },
+  { path: '/home', name: 'Home', component: MyHome },
+  { path: '/about', name: 'About', component: MyAbout },
+  { path: '/Portfolio', name: 'Portfolio', component: MyPortfolio },
+  { path: '/Contact', name: 'Contact', component: MyContact },
 ];
 
 // 라우터 생성

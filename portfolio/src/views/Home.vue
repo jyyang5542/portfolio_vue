@@ -1,12 +1,12 @@
 <template>
-  <section class="className">
-    {{ sample }}
+  <section class="home">
+    <h1>Hom3</h1>
   </section>
 </template>
 
 <script>
 export default {
-  name: 'DefaultLayout',
+  name: 'MyHome',
   data() {
     return {
       sample: 'Sample',

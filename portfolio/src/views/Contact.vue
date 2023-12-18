@@ -1,12 +1,12 @@
 <template>
-  <div class="hello">
-    <h1>222</h1>
-  </div>
+  <section class="contact">
+    <h1>Contact</h1>
+  </section>
 </template>
 
 <script>
 export default {
-  name: 'SecondView',
+  name: 'MyContact',
   // props: {
   //   msg: String,
   // },
