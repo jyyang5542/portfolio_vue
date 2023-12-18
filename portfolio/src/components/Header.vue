@@ -5,17 +5,20 @@
     </h1>
     <nav class="header-nav">
       <ul class="header-nav__list">
-        <li class="header-nav__item">
-          <a href="/home" class="header-nav__link" :class="currentRoute === 'Home' ? 'on' : ''">Home</a>
+        <li class="header-nav__item" :class="currentRoute === 'Home' ? 'on' : ''">
+          <a href="/home" class="header-nav__link">Home</a>
         </li>
-        <li class="header-nav__item">
-          <a href="/about" class="header-nav__link" :class="currentRoute === 'About' ? 'on' : ''">About</a>
+        <li class="header-nav__item" :class="currentRoute === 'About' ? 'on' : ''">
+          <a href="/about" class="header-nav__link">About</a>
         </li>
-        <li class="header-nav__item">
-          <a href="/portfolio" class="header-nav__link" :class="currentRoute === 'Portfolio' ? 'on' : ''">Portfolio</a>
+        <li class="header-nav__item" :class="currentRoute === 'Portfolio' ? 'on' : ''">
+          <a href="/portfolio" class="header-nav__link">Portfolio</a>
         </li>
-        <li class="header-nav__item">
-          <a href="/contact" class="header-nav__link" :class="currentRoute === 'Contact' ? 'on' : ''">Contact</a>
+        <li class="header-nav__item" :class="currentRoute === 'Contact' ? 'on' : ''">
+          <a href="/contact" class="header-nav__link">Contact</a>
+        </li>
+        <li class="header-nav__item" :class="currentRoute === 'Study' ? 'on' : ''">
+          <a href="/study" class="header-nav__link">Study</a>
         </li>
       </ul>
     </nav>
@@ -28,8 +31,14 @@ export default {
 
   data() {
     return {
-      currentRoute: this.$router.currentRoute.value.name,
+      currentRoute: '',
     };
+  },
+
+  watch: {
+    $route(to) {
+      return (this.currentRoute = to.name);
+    },
   },
 };
 </script>

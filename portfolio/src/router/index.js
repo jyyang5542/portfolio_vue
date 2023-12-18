@@ -4,6 +4,7 @@ import MyHome from '../views/Home';
 import MyAbout from '../views/About';
 import MyPortfolio from '../views/Portfolio';
 import MyContact from '../views/Contact';
+import MyStudy from '../views/Study';
 
 // 라우터 설계
 const routes = [
@@ -11,6 +12,7 @@ const routes = [
   { path: '/about', name: 'About', component: MyAbout },
   { path: '/Portfolio', name: 'Portfolio', component: MyPortfolio },
   { path: '/Contact', name: 'Contact', component: MyContact },
+  { path: '/Study', name: 'Study', component: MyStudy },
 ];
 
 // 라우터 생성
