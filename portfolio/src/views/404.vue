@@ -1,6 +1,8 @@
 <template>
   <section class="not-found">
-    <h1>Page Not Found</h1>
+    <div class="content-wrap">
+      <h1>Page Not Found</h1>
+    </div>
   </section>
 </template>
 

@@ -1,6 +1,8 @@
 <template>
   <section class="home">
-    <h1>Home</h1>
+    <div class="content-wrap">
+      <h1>Home</h1>
+    </div>
   </section>
 </template>
 

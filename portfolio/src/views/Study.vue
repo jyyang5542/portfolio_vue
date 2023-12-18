@@ -1,6 +1,8 @@
 <template>
   <section class="study">
-    <h1>Study</h1>
+    <div class="content-wrap">
+      <h1>Study</h1>
+    </div>
   </section>
 </template>
 

@@ -1,6 +1,8 @@
 <template>
   <section class="contact">
-    <h1>Contact</h1>
+    <div class="content-wrap">
+      <h1>Contact</h1>
+    </div>
   </section>
 </template>
 
